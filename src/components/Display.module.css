@@ -1,0 +1,13 @@
+.display {
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.displayInput {
+  width: 90%;
+  height: 60px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  outline: none;
+}

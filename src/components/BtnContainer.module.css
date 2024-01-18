@@ -1,0 +1,35 @@
+.btnContainer {
+  /* border: 1px solid red; */
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em 0;
+  align-items: center;
+  justify-items: center;
+  margin: 1em 0;
+}
+.calcBtn {
+  border: 1px solid #111;
+  border: none;
+  width: 70px;
+  height: 60px;
+  border-radius: 10px;
+  color: #123;
+  cursor: pointer;
+  transition: 0.5s ease;
+  font-weight: 500;
+  font-size: 1.42em;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.calcBtn:hover {
+  background: #000;
+  color: #fff;
+}
+.calcBtn:nth-child(4) {
+  background-color: rgb(299, 170, 170);
+}
+.calcBtn:last-child {
+  background-color: mediumaquamarine;
+}
