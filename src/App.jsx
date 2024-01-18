@@ -54,13 +54,13 @@ function App() {
       <Container>
         <h2>
           Created By -{" "}
-          <a href="https://github.com/Mr-Abraham" target="_blank">
+          <a href="https://twitter.com/abraham_shivam" target="_blank">
             Shivam Abraham
           </a>
         </h2>
         <br />
         <p>
-          <a href="https://github.com/Mr-Abraham/calculator">
+          <a href="https://github.com/Mr-Abraham/calculator" target="_blank">
             Click here to see the source code
           </a>
         </p>
