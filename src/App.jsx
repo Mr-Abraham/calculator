@@ -60,7 +60,9 @@ function App() {
         </h2>
         <br />
         <p>
-          <a href="">Click here to see the source code</a>
+          <a href="https://github.com/Mr-Abraham/calculator">
+            Click here to see the source code
+          </a>
         </p>
       </Container>
     </div>
