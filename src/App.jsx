@@ -3,6 +3,8 @@ import Style from "./App.module.css";
 import Display from "./components/Display";
 import BtnContainer from "./components/BtnContainer";
 import Container from "./components/Container";
+import { useContext } from "react";
+import { Todo } from "./store/CalcItems";
 function App() {
   const calculatorItems = [
     "1",
@@ -39,33 +41,33 @@ function App() {
       let newVal = displayVal.substring(0, displayVal.length - 1);
       setdisplayVal(newVal);
     } else {
-      setdisplayVal((prevValue) => {
-        return prevValue + val;
-      });
+      setdisplayVal((prevValue) => prevValue + val);
     }
   }
   return (
-    <div className={Style.Calculator}>
-      <h1 style={{ marginBottom: ".51em", color: "#111", fontSize: "3.4em" }}>
-        Calculator
-      </h1>
-      <Display value={displayVal} />
-      <BtnContainer curVal={currentVal} calcItems={calculatorItems} />
-      <Container>
-        <h2>
-          Created By -{" "}
-          <a href="https://twitter.com/abraham_shivam" target="_blank">
-            Shivam Abraham
-          </a>
-        </h2>
-        <br />
-        <p>
-          <a href="https://github.com/Mr-Abraham/calculator" target="_blank">
-            Click here to see the source code
-          </a>
-        </p>
-      </Container>
-    </div>
+    <Todo.Provider value={{ calculatorItems, displayVal, currentVal }}>
+      <div className={Style.Calculator}>
+        <h1 style={{ marginBottom: ".51em", color: "#111", fontSize: "3.4em" }}>
+          Calculator
+        </h1>
+        <Display />
+        <BtnContainer />
+        <Container>
+          <h2>
+            Created By -{" "}
+            <a href="https://twitter.com/abraham_shivam" target="_blank">
+              Shivam Abraham
+            </a>
+          </h2>
+          <br />
+          <p>
+            <a href="https://github.com/Mr-Abraham/calculator" target="_blank">
+              Click here to see the source code
+            </a>
+          </p>
+        </Container>
+      </div>
+    </Todo.Provider>
   );
 }
 

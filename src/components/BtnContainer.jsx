@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "./BtnContainer.module.css";
-function BtnContainer({ calcItems, curVal }) {
+import { Todo } from "../store/CalcItems";
+function BtnContainer() {
+  const { currentVal, calculatorItems } = useContext(Todo);
   return (
     <div className={style.btnContainer}>
-      {calcItems.map((item) => (
+      {calculatorItems.map((item) => (
         <button
           key={item}
           onClick={() => {
-            curVal(item);
+            currentVal(item);
           }}
           className={style.calcBtn}
         >
